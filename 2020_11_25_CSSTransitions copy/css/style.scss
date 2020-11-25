@@ -1,0 +1,146 @@
+.moviment{
+    &__horitzontal{
+        width: 100px;
+        height: 100px;
+        background: red;
+
+        &:hover{
+            transform: translate(120px,0);
+            transition-duration:0.5s;
+        }
+    }
+
+    &__text{
+        margin-top: 16px;
+
+        &:hover{
+            font-size: 40px;
+            transition-duration:5s;
+        }
+    }
+
+    &__x{
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        background: red;
+
+        &:hover{
+            transform: rotateY(180deg);
+            transition-duration: 0.5s;
+        }
+    }
+
+    &__color{
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        background: blue;
+
+        &:hover{
+            transition-duration: 0.25s;
+            background:red;
+        }
+    }
+
+    &__expansiu{
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        background: red;
+
+        &:hover{
+            transition-duration: 1s;
+            width: 200px;
+        }
+    }
+
+    &__desapareixer{
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        background: red;
+
+        &:hover{
+            opacity: 0;
+            transition-duration: 0.5s;
+        }
+    }
+
+    &__roda{
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        background: red;
+
+        &:hover{
+            transform: translateX(300px) rotateZ(360deg);
+            transition-duration: 1s;
+        }
+    }
+
+    &__omar{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom:-100px;
+        }
+
+        &:hover img{
+            transition-duration: 0.25s;
+            bottom: 0px;
+        }
+    }
+
+    &__1-2-3-4{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+
+        &:hover{
+            
+        }
+
+        .number-1{
+            width: 50%;
+        } 
+        .number-2{
+            width: 50%;
+        } 
+        .number-3{
+            width: 50%;
+        } 
+        .number-4{
+            width: 50%;
+        } 
+
+    }
+
+
+    &__explosio{
+        width: 100px;
+        height: 100px;
+        margin-top: 16px;
+        background: red;
+
+        &:hover{
+            opacity: 0;
+            transition-duration:0.5s;
+            transform: scale(5) rotate(30deg);
+            -moz-transform: scale(5) rotate(30deg);
+            -webkit-transform: scale(5) rotate(30deg);
+            -o-transform: scale(5) rotate(30deg);
+        }
+    }
+}
