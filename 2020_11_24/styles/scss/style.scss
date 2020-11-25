@@ -1,0 +1,24 @@
+@import "./reset";
+@import "./variables";
+@import "./header";
+@import "./aside";
+@import "./main";
+@import "./aside-right";
+@import "./prefooter";
+@import "./footer";
+
+.main-container {
+    display: grid;
+    grid-template-columns: auto 200px 600px 300px auto;
+    main {
+        grid-column: 3 / 4;
+    }
+
+    aside {
+        grid-column: 2 / 3;
+    }
+
+    .aside-right{
+        grid-column: 4 / 5;
+    }
+}

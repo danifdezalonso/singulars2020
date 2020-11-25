@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container {
+    max-width: 1024px;
+    margin:0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+/* ------------ Navigation bar ------------  */ 
+nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+    background:rgb(213, 210, 210);
+    position: sticky;
+    top:0;
+    max-width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 16px;
+    padding-right:0px;
+    text-align: center;
+}
+
+nav ul a {
+    all:none;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+
+/* ------------ END Navigation bar ------------  */ 

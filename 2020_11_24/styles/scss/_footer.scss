@@ -1,0 +1,14 @@
+@import "./variables";
+
+footer {
+    width: 100%;
+    background-color: $secondaryColor;
+
+    .footer-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+    }
+
+}

@@ -1,0 +1,38 @@
+@import "./variables";
+
+.prefooter{
+    background-color: $primaryColor;
+    
+    .prefooter-container{
+        width: 1024px;
+        margin: 0 auto;
+        .boxes{
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 24px; 
+
+            .box{
+                max-width: 500px;
+                padding:24px;
+
+                a {
+                    color:black;
+
+                    &:hover {
+                        color:$secondaryColor;
+                    }
+                } 
+            }
+        }
+
+        .box-container{
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                color:$secondaryColor;
+            }
+        }
+    }
+}
