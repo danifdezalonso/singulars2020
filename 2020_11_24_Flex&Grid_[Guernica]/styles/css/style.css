@@ -56,7 +56,7 @@ aside ul {
 
 aside ul li {
   padding: 16px;
-  background-color: #f1f08a;
+  background-color: blue;
   text-align: center;
   margin-top: 8px;
 }
@@ -168,7 +168,7 @@ main .main__boxes__right ul a li {
 }
 
 .prefooter {
-  background-color: #f1f08a;
+  background-color: blue;
 }
 
 .prefooter .prefooter-container {
