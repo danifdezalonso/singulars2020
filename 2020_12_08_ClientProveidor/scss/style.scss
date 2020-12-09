@@ -1,0 +1,183 @@
+@import "./reset";
+@import "./variables";
+@import "./headerFooter";
+
+.container {
+    margin: 0 auto;
+    width:1240px;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+    
+    .grid-container {
+        .menu { grid-area: menu; }
+        .logo { grid-area: logo; }
+        .main { grid-area: main; }
+        .xarxes { grid-area: xarxes; }
+        
+        display: grid;
+        grid-template-areas:
+        'menu logo logo logo logo xarxes'
+        'menu main main main main xarxes'
+        'menu main main main main xarxes'
+        ;
+        grid-gap: 10px;
+        padding:10px;
+        
+        @media only screen and (max-width: 600px) {
+            .menu { grid-area: menu; }
+            .logo { grid-area: logo; }
+            .main { grid-area: main; }
+            .xarxes { grid-area: xarxes; }
+            
+            display: grid;
+            grid-template-areas:
+            'menu'
+            'logo'
+            'main'
+            'xarxes'
+            ;
+            grid-gap: 10px;
+            padding:10px;
+        }
+        
+        .logo {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 60px;
+            }
+        }
+        .main {
+            img {
+                display:block;
+                margin:auto;
+                width: 100%;
+                @media only screen and (max-width: 600px){
+                    width:auto;
+                }
+            }
+            
+            .grid-qui-som{
+                .row{
+                    display: flex;
+                    flex:wrap;
+                    padding: 0 4px;
+                    
+                    .column{
+                        flex: 33%;
+                        padding: 0 4px;
+                        
+                        img {
+                            margin-top: 8px;
+                            vertical-align: middle;
+                            width: 100%;
+                        }
+                    }
+                }
+                @media only screen and (max-width: 600px) {
+                    .row {
+                        display:flex;
+                        flex-direction: column;
+                        .column {
+                            flex:100%;
+                            .img {
+                                width: 100%;
+                            }
+                        }
+                    }    
+                }
+                
+                
+            }
+            .format{
+                margin-top:24px;
+                input{
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+            }            
+            .candidat{
+                display:flex;
+                margin-top:16px;              
+                @media only screen and (max-width: 600px) {
+                    display:flex;
+                    flex-direction: column;
+                }
+                .float-left{
+                    float:left;
+                    margin-right: 8px;
+                    width:auto;
+                    @media only screen and (max-width: 600px) {
+                        float:none;
+                        margin-left:0px;
+                        display:block;
+                        margin:auto;
+                    }
+                }
+                .float-right{
+                    float:right;
+                    margin-left:8px;
+                    width:auto;
+                    @media only screen and (max-width: 600px) {
+                        float:none;
+                        margin-left:0px;
+                        display:block;
+                        margin:auto;
+                    }
+                }
+            }
+            ul{
+                margin: auto;
+                width:50%;
+                li{
+                    margin: 0 auto;
+                }
+            }
+        }
+        
+        .xarxes {
+            .lastTweet {
+                width:100%;
+                height:200px;
+                background-color: #00acee;
+            }
+            .lastFb{
+                width:100%;
+                height:200px;
+                background-color: #3b5998;
+            }
+            .lastIg{
+                width:100%;
+                height:200px;
+                background-color: #FD1D1D;
+            }
+        }
+        
+        .menu{
+            width: 100%;
+            nav{
+                ul{
+                    list-style-type: none;
+                    text-decoration: none;
+                    
+                    a {
+                        color: white;
+                        padding:16px;
+                        li{
+                            background-color:$secondaryRedColor;
+                            padding:16px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

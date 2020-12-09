@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;    
+}
+
+.container{
+    display: flex;
+}
+.left{
+    background-color: red;
+    width: 50%;
+    height: 100vh;
+}
+
+.right{
+    background-color: blue;
+width: 50%;
+}

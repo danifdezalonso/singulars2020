@@ -1,0 +1,53 @@
+.max-width{
+    width: 100%;
+    background-color: $secondaryRedColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .container-titol-subtitol{
+        padding: 40px 0;
+        .titol{
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:$primaryGrayColor;
+        }
+        
+        .subtitol {
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            color: $primaryGrayColor;
+        }
+    }
+    
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        .logo{
+            margin:50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: auto;
+            a {
+                i{
+                    font-size: 2rem;
+                    color:$primaryGrayColor;
+                }
+                
+                i:hover{
+                    color:$tertiaryGrayColor;
+                }
+            }
+            
+        }
+        
+    }
+    
+}
