@@ -101,7 +101,9 @@
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'menu logo logo logo logo xarxes' 'menu main main main main xarxes' 'menu main main main main xarxes';
-  grid-gap: 10px;
+  -ms-grid-columns: 150px 1fr 1fr 1fr 1fr 150px;
+      grid-template-columns: 150px 1fr 1fr 1fr 1fr 150px;
+  grid-gap: 16px;
   padding: 10px;
 }
 
@@ -139,6 +141,8 @@
     display: -ms-grid;
     display: grid;
         grid-template-areas: 'menu' 'logo' 'main' 'xarxes';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 10px;
   }
@@ -179,6 +183,10 @@
 
 .container .grid-container .logo img {
   height: 60px;
+}
+
+.container .grid-container .main .margin-top-16 {
+  margin-top: 16px;
 }
 
 .container .grid-container .main img {
@@ -251,6 +259,15 @@
           box-sizing: border-box;
 }
 
+.container .grid-container .main .format input[type=button] {
+  background-color: #b91817;
+  color: white;
+}
+
+.container .grid-container .main .format input[type=button]:hover {
+  background-color: #333333;
+}
+
 .container .grid-container .main .candidat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,6 +326,25 @@
   margin: 0 auto;
 }
 
+.container .grid-container .xarxes {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .grid-container .xarxes {
+    position: static;
+  }
+}
+
+.container .grid-container .xarxes .margin-top-16 {
+  margin-top: 16px;
+}
+
 .container .grid-container .xarxes .lastTweet {
   width: 100%;
   height: 200px;
@@ -329,6 +365,17 @@
 
 .container .grid-container .menu {
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .grid-container .menu {
+    position: static;
+  }
 }
 
 .container .grid-container .menu nav ul {
@@ -339,10 +386,17 @@
 .container .grid-container .menu nav ul a {
   color: white;
   padding: 16px;
+  text-decoration: none;
 }
 
 .container .grid-container .menu nav ul a li {
   background-color: #981914;
   padding: 16px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.container .grid-container .menu nav ul a li:hover {
+  background-color: #333333;
 }
 /*# sourceMappingURL=style.css.map */
