@@ -42,14 +42,34 @@
         // console.log(grados_f + " grados Fahrenheit son " + grados_c.toFixed(1) + " grados Celsius") // toFixed() fija los decimales
     
         //--------------------------------------------------
-        nom = "Ester";
-        mida = "gran";
-        material = "sushi";
-        comentari = "Salmó a tope!";
+        // nom = "Ester";
+        // mida = "gran";
+        // material = "sushi";
+        // comentari = "Salmó a tope!";
 
-        console.log(`${nom} ha comprat una capsa de ${material} de mida ${mida} i ha dit: ${comentari}`);
-    
-    
+        // console.log(`${nom} ha comprat una capsa de ${material} de mida ${mida} i ha dit: ${comentari}`);
+            
+        //--------------------------------------------------
+        var nota = prompt("Quina és la teva nota?");    // agafa la nota d'un diàleg
+        var nota_n = parseFloat(nota);
+        console.log([nota, nota_n]);
+
+        if(nota == ""){
+            console.log('%cNo has introduit cap nota!', 'color: red; font-weight: bold'); 
+            // el %c serveix per afegir CSS als missatges de la consola
+        } else if (isNaN(nota_n) || nota_n > 10 || nota_n < 0){
+            console.log(`%c${nota} no és una nota vàlida!`, 'color: red; font-weight: bold');
+        } else {
+            if (nota_n > 5 & nota_n != 10){
+                console.log('Aprobado');
+            } else if (nota_n == 5){
+                console.log('Aprobado por los pelos');
+            } else if (nota_n == 10){
+                console.log('Debes de ser Omar');
+            } else {
+                console.log('Suspenso');
+            }
+        }
     </script>
 </body>
 </html>
