@@ -50,26 +50,56 @@
         // console.log(`${nom} ha comprat una capsa de ${material} de mida ${mida} i ha dit: ${comentari}`);
             
         //--------------------------------------------------
-        var nota = prompt("Quina és la teva nota?");    // agafa la nota d'un diàleg
-        var nota_n = parseFloat(nota);
-        console.log([nota, nota_n]);
+        // var nota = prompt("Quina és la teva nota?");    // agafa la nota d'un diàleg
+        // var nota_n = parseFloat(nota);
+        // console.log([nota, nota_n]);
 
-        if(nota == ""){
-            console.log('%cNo has introduit cap nota!', 'color: red; font-weight: bold'); 
-            // el %c serveix per afegir CSS als missatges de la consola
-        } else if (isNaN(nota_n) || nota_n > 10 || nota_n < 0){
-            console.log(`%c${nota} no és una nota vàlida!`, 'color: red; font-weight: bold');
-        } else {
-            if (nota_n > 5 & nota_n != 10){
-                console.log('Aprobado');
-            } else if (nota_n == 5){
-                console.log('Aprobado por los pelos');
-            } else if (nota_n == 10){
-                console.log('Debes de ser Omar');
-            } else {
-                console.log('Suspenso');
-            }
-        }
+        // if(nota == ""){
+        //     console.log('%cNo has introduit cap nota!', 'color: red; font-weight: bold'); 
+        //     // el %c serveix per afegir CSS als missatges de la consola
+        // } else if (isNaN(nota_n) || nota_n > 10 || nota_n < 0){
+        //     console.log(`%c${nota} no és una nota vàlida!`, 'color: red; font-weight: bold');
+        // } else {
+        //     if (nota_n > 5 & nota_n != 10){
+        //         console.log('Aprobado');
+        //     } else if (nota_n == 5){
+        //         console.log('Aprobado por los pelos');
+        //     } else if (nota_n == 10){
+        //         console.log('Debes de ser Omar');
+        //     } else {
+        //         console.log('Suspenso');
+        //     }
+        // }
+        //--------------------------------------------------
+        var data = new Date();
+        var dia = data.getDay();
+
+        switch (dia) { 
+            case 0: 
+                document.write("És diumenge");
+                break; 
+            case 1: 
+                document.write("És dilluns"); 
+                break;
+            case 2: 
+                document.write("És dimarts"); 
+                break;
+            case 3: 
+                document.write("És dimecres"); 
+                break;
+            case 4: 
+                document.write("És dijous"); 
+                break; 
+            case 5:
+                document.write("És divendres"); 
+            case 6: 
+                document.write("És dissabte"); 
+                break; 
+            default: 
+                document.write("Aquest dia no existeix"); 
+}
+
+
     </script>
 </body>
 </html>
