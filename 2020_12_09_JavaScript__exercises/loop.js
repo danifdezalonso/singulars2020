@@ -22,7 +22,6 @@ for (let i = 0; i <=20; i++) {
 };
 
 // recorre números muestra el seleccionado (con un prompt) de manera diferente (con CSS) en la consola
-
 let numSeleccionadoPrompt = prompt("Escribe un numero entre el 1 y el 25");
 let numSeleccionado = parseInt(numSeleccionadoPrompt);
 
@@ -40,3 +39,9 @@ for (let x = 0; x<=10; x++){ // x és l'indicador de la taula
         console.log(`${x} * ${i} = ${x*i}`); // x * i = 1 * 0
     };
 };
+
+// -----------------------------------------------------------------
+console.log(Math.ceil(Math.random()*20)); //Math.random * 20 = numero entre 1 i 20, math.ceil arrodoneix cap adalt
+console.log(parseInt(Math.random()*21));
+
+
