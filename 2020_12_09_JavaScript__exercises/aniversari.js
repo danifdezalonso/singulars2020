@@ -17,4 +17,12 @@ if(mes == 2) {
     dia = Math.ceil(Math.random()*30);
 }
 
-console.log(`Fas anys el dia ${dia} de ${mes} del ${any}`);
+document.write(`Fas anys el dia ${dia} de ${mes} del ${any}`);
+
+//--------- FUNCIÓ GENERADORA DE NÚMEROS RANDOM --------//
+
+// function random(min,max){
+//     return min + parseInt(Math.random()*(max -min +1));
+// };
+
+// random(1,10);
