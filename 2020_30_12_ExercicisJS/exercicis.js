@@ -145,10 +145,11 @@ var costat = 3;
 var costats = 5;
 
 // TODO: defineix la funció poligon()
-function poligon(costat,costats){
-    const perimetre = costat * costats;
-    const apotema = costat; 
-    return `L'àrea del perímetre és de ${perimetre * apotema / 2} i el perímetre és de ${perimetre}`
+function poligon(longCostat, numCostats) {
+    let apotema = longCostat / (2 * Math.tan(Math.PI / numCostats)); 
+    P = longCostat * numCostats;
+    A = P * apotema / 2;
+    console.log(`El polígon regular de costat ${longCostat} i ${numCostats} costats té un perímetre de ${P} i un àrea de ${A}`);
 }
 
 poligon(costat, costats);
@@ -444,11 +445,87 @@ function horoscop(){
 console.log(horoscop());
 
 //* ------------------------------ Bucle for ------------------------------------
+// exercici 21: fes un bucle que escrigui 10 vegades a la consola alternant un color i un altre
+
+// TODO el codi aquí
+for (let i = 1; i < 10; i++) {
+    console.log(`${[i]} - vermell`),
+    i++;
+    console.log(`${[i]} - groc`);
+}
+
+// exercici 22: fes un bucle que escrigui 20 números i escrigui al seu costat: "hola" si és múltiple de 2, "adeu" si
+// és múltiple de 3 i "què tal? si és múltiple de 5"
+// TODO el codi aquí
+for (let index = 1; index < 20; index++) {
+    if(index % 5 == 0 ){
+        console.log(`${index} - Què tal?`);
+    } else if(index % 3 == 0) {
+        console.log(`${index} - adeu`);
+    }else if (index % 2 == 0) {
+        console.log(`${index} - Hola`);
+    } else {
+        console.log(`${index}`);
+    }
+}
+
+// exercici 23: fes un contador que mostri a la consola els números de l'1 al número que introdueixis 
+// com a paràmentre (fins a 1000 com a màxim)PISTA: usa la paraula clau "break"
+
+let max = prompt("Escriu un número de l'1 al 1000", "20");
+// TODO defineix aquí la funció contar()
+function contar(max) {
+    let i = 0;
+    while (i <= max) {
+        console.log(i);
+        i++;
+    }
+}
+contar(max); // això ha de mostrar a la consola els números de l'1 al número introduit
 
 
+// exercici 24: fes un buscador de números primers. Li fixarem un límit (p.e. 100) i agafarà cada número i el dividirà
+// per tots els anteriors; si alguna de les divisions dona zero, llavors no és primer; si cap dona zero, l'escriurà a la
+// consola
+// numero primer només és divisible per 1 i per si mateix
+// TODO el codi aquí
+    const esPrimario = (num) => {
+        for(let i = 2; i <= num; i++){
+            
+        }
+    }
+
+// exercici 25: fes un contador que només mostri els números que tinguin un dígit contingut a la string predefinida fins a 100
+// PISTA: usa la paraula clau "continue"
+
+var digits = prompt("Quins digits vols mostrar (1-9)?");
+
+// TODO defineix la funció mostrarDigits()
+function mostrarDigits(dig){
+    for (let index = 0; index < 100; index++) {
+        
+    }
+}
+mostrarDigits(digits);      // si dígits és 234, això mostrarà "2, 3, 4, 12, 13, 14, 20, 21, 22, 23..."
 
 //* ----------------------------- Bucle while -----------------------------------
+// exercici 26: llista de la compra. Fes que un prompt es repeteixi fins que l'usuari introdueixi una paraula clau; fins
+// llavors, cada paraula introduida serà un item de la llista de la compra, que s'escriurà després de que l'usuari l'aturi
+// amb el format:       Llista de la compra:
+//                       - Pa
+//                       - Mantega
+//                       - Aigua
 
-
-
+// TODO aquí el codi
+const END_KEYWORD = "fin";
+var llistaCompra = [];
+do {
+    var prompQuestion = prompt("Escriu items per la llista de la compra, per finalitzar escriu -fin-", "ferrari");
+	llistaCompra.push(prompQuestion);
+}
+while (prompQuestion!=END_KEYWORD){
+    llistaCompra.pop();
+    console.log("Llista compra:");
+	llistaCompra.forEach(item => console.log(`- ${item}`));
+}
 //* ---------------------------- Mètodes arrays ---------------------------------
