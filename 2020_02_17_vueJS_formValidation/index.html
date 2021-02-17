@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>VueJS test</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <form class="vue-form" @submit.prevent="submit">
+            <fieldset>
+                <div>
+                    <label class="label" for="name">Name: {{name}}</label>
+                    <input type="text" name="name" id="name" required="" placeholder="Name" v-model="name"
+                        @change="checkName">
+                    <span class="incorrect" v-if="isIncorrectName">Try again!</span>
+                    <span class="correct" v-else>OK!</span>
+                </div>
+
+                <div>
+                    <label class="label" for="email">Email: {{email}}</label>
+                    <input type="email" name="email" id="email" required="" placeholder="email" @change="checkEmail"
+                        v-model="email">
+                    <span class="incorrect" v-if="isIncorrectEmail">Try again!</span>
+                    <span class="correct" v-else>OK!</span>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+
+
+
+    <script src="Form.js"></script>
+</body>
+
+</html>
